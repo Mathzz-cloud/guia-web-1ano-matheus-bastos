@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guia Profissional de Desenvolvimento Web</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <h1 class="header__logo">Guia Profissional de Desenvolvimento Web</h1>
+      <button class="header__toggle" aria-label="Alternar menu" aria-expanded="false" aria-controls="nav-menu">&#9776;</button>
+      <nav id="nav-menu" class="nav-menu" hidden>
+        <ul class="nav-menu__list">
+          <li><a href="index.html" tabindex="0">Home</a></li>
+          <li><a href="tecnologias.html" tabindex="0">Tecnologias</a></li>
+          <li><a href="boas-praticas.html" tabindex="0">Boas Práticas</a></li>
+          <li><a href="fluxo.html" tabindex="0">Fluxo</a></li>
+          <li><a href="quiz.html" tabindex="0">Quiz</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema claro/escuro">🌙</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container" tabindex="0">
+      <h2>Seu guia profissional para aprender Desenvolvimento Web</h2>
+      <p>Entenda HTML, CSS e JavaScript com exemplos e boas práticas.</p>
+      <a href="#conteudo" class="btn-primary">Começar</a>
+    </section>
+
+    <section id="conteudo" class="container">
+      <!-- Conteúdo principal da página será inserido aqui -->
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p>&copy; 2025 Matheus Bastos - Guia Profissional de Desenvolvimento Web</p>
+    <nav aria-label="Links do rodapé">
+      <ul class="footer__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tecnologias.html">Tecnologias</a></li>
+        <li><a href="boas-praticas.html">Boas Práticas</a></li>
+        <li><a href="fluxo.html">Fluxo</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
