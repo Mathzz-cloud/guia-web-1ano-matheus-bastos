@@ -1,14 +1,75 @@
-<!-- Estrutura inicial para quiz.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz | Guia Profissional de Desenvolvimento Web</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- Conteúdo será implementado -->
+  <header id="main-header" aria-label="Cabeçalho principal">
+    <nav aria-label="Menu principal" class="container">
+      <a href="index.html" class="logo"><img src="assets/logo.svg" alt="Logo Guia Web" height="36"></a>
+      <div class="header-controls">
+        <button id="theme-toggle" class="btn-icon" aria-pressed="false" aria-label="Alternar tema">☾</button>
+        <button id="menu-toggle" class="menu-btn" aria-label="Abrir menu" aria-controls="main-menu" aria-expanded="false">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+      </div>
+      <ul id="main-menu" class="menu" hidden>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tecnologias.html">Tecnologias</a></li>
+        <li><a href="boas-praticas.html">Boas Práticas</a></li>
+        <li><a href="fluxo.html">Fluxo</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Quiz</h1>
+      <p>Teste seus conhecimentos sobre HTML, CSS, JavaScript e boas práticas.</p>
+    </section>
+
+    <section id="quiz-area">
+      <ol id="questions-list">
+        <li data-answer="a">
+          <p>Qual elemento é semântico para um rodapé de página?</p>
+          <label><input type="radio" name="q1" value="a"> &lt;footer&gt;</label>
+          <label><input type="radio" name="q1" value="b"> &lt;div&gt;</label>
+          <label><input type="radio" name="q1" value="c"> &lt;span&gt;</label>
+        </li>
+        <li data-answer="a">
+          <p>Qual propriedade controla o espaçamento entre linhas no CSS?</p>
+          <label><input type="radio" name="q2" value="a"> line-height</label>
+          <label><input type="radio" name="q2" value="b"> letter-spacing</label>
+          <label><input type="radio" name="q2" value="c"> word-spacing</label>
+        </li>
+        <li data-answer="b">
+          <p>Qual método adiciona um listener de evento em JS?</p>
+          <label><input type="radio" name="q3" value="a"> listen()</label>
+          <label><input type="radio" name="q3" value="b"> addEventListener()</label>
+          <label><input type="radio" name="q3" value="c"> onEvent()</label>
+        </li>
+      </ol>
+      <button id="submit-quiz" class="btn-primary">Enviar</button>
+      <div id="quiz-result" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer aria-label="Rodapé" class="container">
+    <nav aria-label="Navegação do rodapé">
+      <a href="index.html">Home</a> |
+      <a href="tecnologias.html">Tecnologias</a> |
+      <a href="boas-praticas.html">Boas Práticas</a> |
+      <a href="fluxo.html">Fluxo</a> |
+      <a href="quiz.html">Quiz</a>
+    </nav>
+    <small>© Guia Web 2025. Feito por Matheus Bastos Correa.</small>
+  </footer>
+
   <script src="js/app.js"></script>
 </body>
 </html>

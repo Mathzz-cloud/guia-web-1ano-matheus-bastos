@@ -5,13 +5,118 @@
   --color-dark: #111827;
   --color-light: #F3F4F6;
   --color-neutral: #E5E7EB;
+  --surface: #ffffff;
+  --muted: #6B7280;
   --font-title: 'Poppins', sans-serif;
   --font-text: 'Inter', sans-serif;
+  --radius: 8px;
+  --container: 1100px;
 }
+
+/* Dark theme variables (will be toggled via [data-theme="dark"]) */
+:root[data-theme="dark"] {
+  --surface: #0b1220;
+  --color-light: #0b1220;
+  --muted: #9CA3AF;
+  --color-primary: #60A5FA;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
 body {
   font-family: var(--font-text);
   background: var(--color-light);
   color: var(--color-dark);
   margin: 0;
   min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Layout container */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 0.5rem;
+  background: var(--color-primary);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  z-index: 999;
+}
+
+/* Header */
+#main-header {
+  position: sticky;
+  top: 0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--color-neutral);
+  z-index: 50;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+}
+.logo img { display: block; }
+
+.header-controls { display: flex; gap: 0.5rem; align-items: center; }
+.btn-icon {
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* Menu */
+.menu { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; }
+.menu a { text-decoration: none; color: inherit; padding: 0.25rem 0.5rem; border-radius: 6px; }
+.menu a:hover, .menu a:focus { background: var(--color-neutral); outline: none; }
+
+.menu-btn { background: transparent; border: none; display: inline-flex; flex-direction: column; gap: 4px; padding: 0.25rem; }
+.menu-btn .bar { width: 22px; height: 2px; background: var(--color-dark); display: block; }
+
+/* Hero */
+.hero { padding: 3rem 0; text-align: left; }
+.hero h1 { font-family: var(--font-title); font-size: 2rem; margin: 0 0 0.5rem; }
+.hero p { color: var(--muted); margin: 0 0 1rem; }
+.btn-primary { display: inline-block; background: var(--color-primary); color: white; padding: 0.6rem 1rem; border-radius: 6px; text-decoration: none; }
+
+/* Cards explicativos */
+.cards-explicativos { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 1rem; margin-bottom: 3rem; }
+.card { background: var(--surface); border: 1px solid var(--color-neutral); padding: 1rem; border-radius: var(--radius); box-shadow: 0 1px 2px rgba(0,0,0,0.03); }
+.card h2 { margin-top: 0; font-size: 1.25rem; font-family: var(--font-title); }
+.card pre { background: #f8fafc; padding: 0.5rem; border-radius: 6px; overflow:auto; }
+
+/* Footer */
+footer { border-top: 1px solid var(--color-neutral); padding: 1rem; text-align: center; color: var(--muted); }
+
+/* Focus visible */
+:focus { outline: 3px solid transparent; }
+:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 2px; }
+
+/* Responsive: collapse menu on small screens */
+@media (max-width: 800px) {
+  .menu { display: none; position: absolute; right: 1rem; top: 64px; background: var(--surface); flex-direction: column; padding: 0.5rem; border-radius: 8px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+  .menu[aria-hidden="false"], .menu[aria-expanded="true"] { display: flex; }
+}
+
+/* Print styles for boas-praticas page (basic) */
+@media print {
+  .menu, .menu-btn, .header-controls { display: none !important; }
+  body { background: white; color: black; }
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
 }

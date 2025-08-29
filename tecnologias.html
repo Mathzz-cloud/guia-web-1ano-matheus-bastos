@@ -1,14 +1,138 @@
-<!-- Estrutura inicial para tecnologias.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tecnologias Web | Guia Profissional de Desenvolvimento Web</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- Conteúdo será implementado -->
+  <header id="main-header" aria-label="Cabeçalho principal">
+    <nav aria-label="Menu principal" class="container">
+      <a href="index.html" class="logo"><img src="assets/logo.svg" alt="Logo Guia Web" height="36"></a>
+      <div class="header-controls">
+        <button id="theme-toggle" class="btn-icon" aria-pressed="false" aria-label="Alternar tema">☾</button>
+        <button id="menu-toggle" class="menu-btn" aria-label="Abrir menu" aria-controls="main-menu" aria-expanded="false">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+      </div>
+      <ul id="main-menu" class="menu" hidden>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tecnologias.html">Tecnologias</a></li>
+        <li><a href="boas-praticas.html">Boas Práticas</a></li>
+        <li><a href="fluxo.html">Fluxo</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero" aria-label="Tecnologias">
+      <h1>Tecnologias Web</h1>
+      <p>Panorama de tecnologias usadas no desenvolvimento web. Use os filtros ou a busca para encontrar tópicos.</p>
+    </section>
+
+    <section class="controls" aria-label="Filtros e busca">
+      <div class="filters">
+        <button class="filter-btn" data-filter="all" aria-pressed="true">Todos</button>
+        <button class="filter-btn" data-filter="frontend">Front-end</button>
+        <button class="filter-btn" data-filter="backend">Back-end</button>
+        <button class="filter-btn" data-filter="db">Banco de Dados</button>
+        <button class="filter-btn" data-filter="devops">DevOps</button>
+        <button class="filter-btn" data-filter="testes">Testes</button>
+      </div>
+      <div class="search">
+        <label for="tech-search" class="sr-only">Buscar tecnologias</label>
+        <input id="tech-search" type="search" placeholder="Buscar tecnologia... (press /)" aria-label="Buscar tecnologias">
+      </div>
+    </section>
+
+    <section id="tech-grid" class="tech-grid" aria-live="polite">
+      <!-- Example cards -->
+      <article class="tech-card" data-category="frontend" data-level="básico" tabindex="0">
+        <h3>HTML</h3>
+        <p>Linguagem de marcação para estruturar conteúdo.</p>
+        <span class="badge">Básico</span>
+      </article>
+      <article class="tech-card" data-category="frontend" data-level="básico" tabindex="0">
+        <h3>CSS</h3>
+        <p>Estilos, layout e responsividade.</p>
+        <span class="badge">Básico</span>
+      </article>
+      <article class="tech-card" data-category="frontend" data-level="intermediário" tabindex="0">
+        <h3>JavaScript</h3>
+        <p>Linguagem para interatividade no browser.</p>
+        <span class="badge">Intermediário</span>
+      </article>
+      <article class="tech-card" data-category="backend" data-level="intermediário" tabindex="0">
+        <h3>Node.js</h3>
+        <p>Runtime JavaScript no servidor.</p>
+        <span class="badge">Intermediário</span>
+      </article>
+      <article class="tech-card" data-category="db" data-level="básico" tabindex="0">
+        <h3>MySQL</h3>
+        <p>Banco relacional tradicional.</p>
+        <span class="badge">Básico</span>
+      </article>
+      <article class="tech-card" data-category="db" data-level="intermediário" tabindex="0">
+        <h3>MongoDB</h3>
+        <p>Banco NoSQL orientado a documentos.</p>
+        <span class="badge">Intermediário</span>
+      </article>
+      <article class="tech-card" data-category="devops" data-level="intermediário" tabindex="0">
+        <h3>Docker</h3>
+        <p>Contêineres para empacotar aplicações.</p>
+        <span class="badge">Intermediário</span>
+      </article>
+      <article class="tech-card" data-category="devops" data-level="avançado" tabindex="0">
+        <h3>Kubernetes</h3>
+        <p>Orquestração de contêineres.</p>
+        <span class="badge">Avançado</span>
+      </article>
+      <article class="tech-card" data-category="testes" data-level="intermediário" tabindex="0">
+        <h3>Jest</h3>
+        <p>Framework de testes para JavaScript.</p>
+        <span class="badge">Intermediário</span>
+      </article>
+      <article class="tech-card" data-category="frontend" data-level="avançado" tabindex="0">
+        <h3>Web Performance</h3>
+        <p>Otimização para tempo de carregamento e Core Web Vitals.</p>
+        <span class="badge">Avançado</span>
+      </article>
+      <article class="tech-card" data-category="backend" data-level="avançado" tabindex="0">
+        <h3>API REST</h3>
+        <p>Arquitetura para comunicação entre cliente e servidor.</p>
+        <span class="badge">Avançado</span>
+      </article>
+      <article class="tech-card" data-category="testes" data-level="básico" tabindex="0">
+        <h3>Testes manuais</h3>
+        <p>Verificação de funcionalidades sem automação.</p>
+        <span class="badge">Básico</span>
+      </article>
+    </section>
+
+    <!-- Modal for details -->
+    <div id="tech-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Fechar">✕</button>
+        <h2 id="modal-title">Título</h2>
+        <p id="modal-desc">Descrição</p>
+      </div>
+    </div>
+  </main>
+
+  <footer aria-label="Rodapé" class="container">
+    <nav aria-label="Navegação do rodapé">
+      <a href="index.html">Home</a> |
+      <a href="tecnologias.html">Tecnologias</a> |
+      <a href="boas-praticas.html">Boas Práticas</a> |
+      <a href="fluxo.html">Fluxo</a> |
+      <a href="quiz.html">Quiz</a>
+    </nav>
+    <small>© Guia Web 2025. Feito por Matheus Bastos Correa.</small>
+  </footer>
+
   <script src="js/app.js"></script>
 </body>
 </html>

@@ -1,14 +1,75 @@
-<!-- Estrutura inicial para fluxo.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fluxograma | Guia Profissional de Desenvolvimento Web</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- Conteúdo será implementado -->
+  <header id="main-header" aria-label="Cabeçalho principal">
+    <nav aria-label="Menu principal" class="container">
+      <a href="index.html" class="logo"><img src="assets/logo.svg" alt="Logo Guia Web" height="36"></a>
+      <div class="header-controls">
+        <button id="theme-toggle" class="btn-icon" aria-pressed="false" aria-label="Alternar tema">☾</button>
+        <button id="menu-toggle" class="menu-btn" aria-label="Abrir menu" aria-controls="main-menu" aria-expanded="false">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+      </div>
+      <ul id="main-menu" class="menu" hidden>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tecnologias.html">Tecnologias</a></li>
+        <li><a href="boas-praticas.html">Boas Práticas</a></li>
+        <li><a href="fluxo.html">Fluxo</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Fluxo do Projeto</h1>
+      <p>Etapas recomendadas para planejar e executar um projeto web.</p>
+    </section>
+
+    <section class="timeline" aria-label="Linha do tempo">
+      <ol class="timeline-list">
+        <li tabindex="0">
+          <strong>Planejamento</strong>
+          <p class="muted">Requisitos, objetivos, escopo.</p>
+        </li>
+        <li tabindex="0">
+          <strong>Design</strong>
+          <p class="muted">Wireframes, protótipos e identidade visual.</p>
+        </li>
+        <li tabindex="0">
+          <strong>Implementação</strong>
+          <p class="muted">HTML, CSS, JS e integração.</p>
+        </li>
+        <li tabindex="0">
+          <strong>Testes & QA</strong>
+          <p class="muted">Testes funcionais e de usabilidade.</p>
+        </li>
+        <li tabindex="0">
+          <strong>Deploy</strong>
+          <p class="muted">Entrega e monitoramento.</p>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer aria-label="Rodapé" class="container">
+    <nav aria-label="Navegação do rodapé">
+      <a href="index.html">Home</a> |
+      <a href="tecnologias.html">Tecnologias</a> |
+      <a href="boas-praticas.html">Boas Práticas</a> |
+      <a href="fluxo.html">Fluxo</a> |
+      <a href="quiz.html">Quiz</a>
+    </nav>
+    <small>© Guia Web 2025. Feito por Matheus Bastos Correa.</small>
+  </footer>
+
   <script src="js/app.js"></script>
 </body>
 </html>

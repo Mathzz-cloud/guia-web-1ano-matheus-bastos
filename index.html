@@ -4,17 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guia Profissional de Desenvolvimento Web</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 </head>
 <body>
+  <a class="skip-link" href="#main" hidden>Ir para o conteúdo</a>
   <!-- Header fixo -->
   <header id="main-header" aria-label="Cabeçalho principal">
     <nav aria-label="Menu principal">
       <a href="index.html" class="logo" tabindex="0"><img src="assets/logo.svg" alt="Logo Guia Web" height="40"></a>
-      <button id="menu-toggle" aria-label="Abrir menu" aria-controls="main-menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="header-controls">
+        <button id="theme-toggle" class="btn-icon" aria-pressed="false" aria-label="Alternar tema claro e escuro">☾</button>
+        <button id="menu-toggle" class="menu-btn" aria-label="Abrir menu" aria-controls="main-menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
       <ul id="main-menu" class="menu" hidden>
         <li><a href="tecnologias.html">Tecnologias</a></li>
         <li><a href="boas-praticas.html">Boas Práticas</a></li>
@@ -25,6 +33,7 @@
   </header>
   <!-- Hero -->
   <main>
+    <div id="main" tabindex="-1">
     <section class="hero" aria-label="Introdução">
       <h1>Guia Profissional de Desenvolvimento Web</h1>
       <p>Seu roteiro completo para dominar HTML, CSS e JavaScript.</p>
@@ -52,6 +61,7 @@
       </div>
     </section>
   </main>
+  </div>
   <!-- Footer -->
   <footer aria-label="Rodapé">
     <nav aria-label="Navegação do rodapé">

@@ -1,14 +1,97 @@
-<!-- Estrutura inicial para boas-praticas.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Boas Práticas | Guia Profissional de Desenvolvimento Web</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- Conteúdo será implementado -->
+  <header id="main-header" aria-label="Cabeçalho principal">
+    <nav aria-label="Menu principal" class="container">
+      <a href="index.html" class="logo"><img src="assets/logo.svg" alt="Logo Guia Web" height="36"></a>
+      <div class="header-controls">
+        <button id="theme-toggle" class="btn-icon" aria-pressed="false" aria-label="Alternar tema">☾</button>
+        <button id="menu-toggle" class="menu-btn" aria-label="Abrir menu" aria-controls="main-menu" aria-expanded="false">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+      </div>
+      <ul id="main-menu" class="menu" hidden>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tecnologias.html">Tecnologias</a></li>
+        <li><a href="boas-praticas.html">Boas Práticas</a></li>
+        <li><a href="fluxo.html">Fluxo</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Boas Práticas</h1>
+      <p>Dicas essenciais para construir aplicações web acessíveis, performáticas e fáceis de manter.</p>
+    </section>
+
+    <section class="accordion-list" aria-label="Boas práticas detalhadas">
+      <div class="accordion">
+        <button class="accordion-toggle">Semântica & Acessibilidade</button>
+        <div class="accordion-panel">
+          <ul>
+            <li>Use elementos semânticos (header, main, nav, footer).</li>
+            <li>Forneça textos alternativos e labels.</li>
+            <li>Cheque tab order e use ARIA apenas quando necessário.</li>
+          </ul>
+          <pre><code>&lt;nav aria-label="Menu principal"&gt;...&lt;/nav&gt;</code></pre>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <button class="accordion-toggle">Responsividade</button>
+        <div class="accordion-panel">
+          <ul>
+            <li>Pratique mobile-first e teste em várias larguras.</li>
+            <li>Prefira Flexbox e Grid para layouts adaptáveis.</li>
+            <li>Implemente breakpoints significativos.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <button class="accordion-toggle">Organização CSS</button>
+        <div class="accordion-panel">
+          <ul>
+            <li>Use metodologias como BEM para nomes previsíveis.</li>
+            <li>Centralize variáveis e tokens em :root.</li>
+            <li>Minimize especificidade e evite !important.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="checklist" aria-label="Checklist de Boas Práticas">
+      <h2>Checklist</h2>
+      <ul id="bp-checklist">
+        <li><label><input type="checkbox" data-key="semantica"> Semântica básica aplicada</label></li>
+        <li><label><input type="checkbox" data-key="altimgs"> Imagens com alt</label></li>
+        <li><label><input type="checkbox" data-key="responsivo"> Layout responsivo</label></li>
+        <li><label><input type="checkbox" data-key="performance"> Otimizações de performance</label></li>
+      </ul>
+      <p id="check-progress">Progresso: 0%</p>
+    </section>
+  </main>
+
+  <footer aria-label="Rodapé" class="container">
+    <nav aria-label="Navegação do rodapé">
+      <a href="index.html">Home</a> |
+      <a href="tecnologias.html">Tecnologias</a> |
+      <a href="boas_praticas.html">Boas Práticas</a> |
+      <a href="fluxo.html">Fluxo</a> |
+      <a href="quiz.html">Quiz</a>
+    </nav>
+    <small>© Guia Web 2025. Feito por Matheus Bastos Correa.</small>
+  </footer>
+
   <script src="js/app.js"></script>
 </body>
 </html>
