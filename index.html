@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia Profissional de Desenvolvimento Web</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+  <!-- Header fixo -->
+  <header id="main-header" aria-label="Cabeçalho principal">
+    <nav aria-label="Menu principal">
+      <a href="index.html" class="logo" tabindex="0"><img src="assets/logo.svg" alt="Logo Guia Web" height="40"></a>
+      <button id="menu-toggle" aria-label="Abrir menu" aria-controls="main-menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="main-menu" class="menu" hidden>
+        <li><a href="tecnologias.html">Tecnologias</a></li>
+        <li><a href="boas-praticas.html">Boas Práticas</a></li>
+        <li><a href="fluxo.html">Fluxo</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Hero -->
+  <main>
+    <section class="hero" aria-label="Introdução">
+      <h1>Guia Profissional de Desenvolvimento Web</h1>
+      <p>Seu roteiro completo para dominar HTML, CSS e JavaScript.</p>
+      <a href="tecnologias.html" class="btn-primary">Começar</a>
+    </section>
+    <!-- Cards explicativos -->
+    <section class="cards-explicativos" aria-label="O que é HTML, CSS e JS">
+      <div class="card" tabindex="0">
+        <h2>HTML</h2>
+        <p>Estrutura e semântica das páginas web.</p>
+        <pre><code>&lt;header&gt;Meu site&lt;/header&gt;</code></pre>
+        <span>Uso: Estrutura, conteúdo, acessibilidade.</span>
+      </div>
+      <div class="card" tabindex="0">
+        <h2>CSS</h2>
+        <p>Estilização e responsividade.</p>
+        <pre><code>header { color: #2563EB; }</code></pre>
+        <span>Uso: Layout, cores, animações.</span>
+      </div>
+      <div class="card" tabindex="0">
+        <h2>JavaScript</h2>
+        <p>Interatividade e lógica.</p>
+        <pre><code>document.querySelector('header').classList.add('ativo');</code></pre>
+        <span>Uso: Dinamismo, validação, armazenamento.</span>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer aria-label="Rodapé">
+    <nav aria-label="Navegação do rodapé">
+      <a href="index.html">Home</a> |
+      <a href="tecnologias.html">Tecnologias</a> |
+      <a href="boas-praticas.html">Boas Práticas</a> |
+      <a href="fluxo.html">Fluxo</a> |
+      <a href="quiz.html">Quiz</a>
+    </nav>
+    <small>© Guia Web 2025. Feito por Matheus Bastos Correa.</small>
+  </footer>
+  <script src="js/app.js"></script>
+</body>
+</html>
